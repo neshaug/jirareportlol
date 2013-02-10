@@ -44,7 +44,7 @@
         
         function hover(el) {
             var srcTr = $(el).parent("tr"),
-                key = srcTr.parent("table").attr("data-key"),
+                key = srcTr.parent().parent().attr("data-key"),
                 targets = null;
                 
             console.log(key);
