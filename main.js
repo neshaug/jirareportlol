@@ -47,8 +47,6 @@
                 key = srcTr.parent().parent().attr("data-key"),
                 targets = null;
                 
-            console.log(key);
-                
             targets = _.chain($("table[data-key='" + key + "']").get()).map(function (table) {
                return _.map($(table).find("tr").get(), function(tr, key) {
                   if(_.isObject(tr) && key === srcTr.index()) {
@@ -61,7 +59,7 @@
                 _.each(targets, function (tr) {
                     $(tr).css("color", "black");
                 });
-                
+
                 // clean up
                 srcTr.off("click");
                 srcTr.off("mouseout");
