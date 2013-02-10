@@ -66,7 +66,6 @@
             }
             
             function click() {
-                console.log(targets);
                 _.each(targets, function (tr) {
                     $(tr).remove();
                 });
